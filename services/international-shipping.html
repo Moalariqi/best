@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="description" content="خدمات الشحن الدولي من نخبة المنافذ. نوفر حلول شحن دولي جوي وبحري وبري إلى أكثر من 100 وجهة حول العالم، مع متابعة دقيقة من بلد المنشأ حتى التسليم النهائي.">
+    <meta name="keywords" content="شحن دولي, شحن جوي, شحن بحري, شحن بري, شحن من الباب إلى الباب, شحن من الميناء إلى الميناء, شحن مؤمن, شحن مواد حساسة, شحن إلى السعودية, شحن من السعودية">
+    <title>الشحن الدولي | نخبة المنافذ</title>
+    <link rel="icon" href="../images/logo-icon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* أنماط خاصة بصفحة الشحن الدولي */
+        .shipping-map {
+            background: rgba(84, 88, 162, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .global-network {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .network-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(84, 88, 162, 0.1);
+            text-align: center;
+        }
+        .network-item i {
+            font-size: 36px;
+            color: #5458a2;
+            margin-bottom: 10px;
+        }
+        .network-item h4 {
+            color: #5458a2;
+            margin-bottom: 8px;
+        }
+        .shipping-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .shipping-option {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(84, 88, 162, 0.1);
+            transition: all 0.3s ease;
+        }
+        .shipping-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(84, 88, 162, 0.2);
+        }
+        .shipping-option i {
+            font-size: 40px;
+            color: #5458a2;
+            margin-bottom: 15px;
+        }
+        .shipping-option h4 {
+            color: #5458a2;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(84, 88, 162, 0.1);
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .comparison-table th {
+            background: #5458a2;
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: rgba(84, 88, 162, 0.03);
+        }
+        .comparison-table tr:hover {
+            background: rgba(84, 88, 162, 0.06);
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="شعار نخبة المنافذ" width="180" height="70" loading="eager">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="قائمة التنقل">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="customs-clearance.html"><i class="fas fa-file-invoice"></i> التخليص الجمركي</a></li>
+                            <li><a href="transportation.html"><i class="fas fa-truck-moving"></i> النقل</a></li>
+                            <li><a href="international-shipping.html"><i class="fas fa-globe-americas"></i> الشحن الدولي</a></li>
+                            <li><a href="logistics.html"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</a></li>
+                            <li><a href="exhibitions.html"><i class="fas fa-calendar-alt"></i> خدمات المعارض والفعاليات</a></li>
+                            <li><a href="packaging.html"><i class="fas fa-box-open"></i> التعبئة والتغليف</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            
+        </div>
+    </header>
+
+    <!-- قسم الخدمة الرئيسي -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <div class="service-hero-text">
+                    <h1>الشحن الدولي</h1>
+                    <p>من أي نقطة في العالم... إلى أي وجهة تختار. نوفّر حلولاً مرنة وفعالة للشحن الدولي عبر شبكات النقل الجوية والبحرية والبرية، مع متابعة دقيقة من بلد المنشأ حتى التسليم النهائي.</p>
+                    <button class="btn btn-primary open-form">اطلب الخدمة الآن</button>
+                </div>
+                <div class="service-hero-image">
+                    <img src="../images/world-map.png" alt="خدمات الشحن الدولي من نخبة المنافذ" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تفاصيل الخدمة -->
+    <section class="service-details">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>حلول شحن دولي متكاملة إلى أكثر من 100 وجهة</h2>
+                    <p>نُدير جميع مراحل الشحن الدولي ضمن هيكل تشغيلي دقيق يبدأ من التنسيق مع المصدّر أو المستورد، مرورًا بإعداد الوثائق اللازمة، وحتى تسليم البضاعة في وجهتها النهائية داخل المملكة أو خارجها. نضمن التوافق مع الأنظمة الدولية والجمركية، مع توفير بدائل نقل متعددة تلائم طبيعة كل شحنة من حيث الوقت، التكلفة، والحساسية.</p>
+
+                    <div class="service-features">
+                        <h3>شبكة الشحن العالمية</h3>
+                        <p>نغطي أكثر من 100 وجهة حول العالم من خلال شراكاتنا مع أكبر شركات النقل والشحن الدولية.</p>
+                        <div class="map-container">
+                            <img src="../images/trr.png" alt="خريطة شبكة الشحن الدولية" loading="lazy">
+                        </div>
+
+                        <div class="global-network">
+                            <div class="network-item">
+                                <i class="fas fa-globe-americas"></i>
+                                <h4>التغطية العالمية</h4>
+                                <p>شبكة شحن دولية تغطي أكثر من 100 وجهة حول العالم في جميع القارات.</p>
+                            </div>
+                            <div class="network-item">
+                                <i class="fas fa-plane"></i>
+                                <h4>الشحن الجوي</h4>
+                                <p>شراكات مع أكبر شركات الطيران لتوفير حلول شحن جوي سريعة وفعالة.</p>
+                            </div>
+                            <div class="network-item">
+                                <i class="fas fa-ship"></i>
+                                <h4>الشحن البحري</h4>
+                                <p>تعاون مع أكبر خطوط الملاحة العالمية لتوفير حلول شحن بحري اقتصادية.</p>
+                            </div>
+                            <div class="network-item">
+                                <i class="fas fa-truck"></i>
+                                <h4>الشحن البري</h4>
+                                <p>شبكة نقل بري متكاملة تربط بين دول الخليج والمنطقة.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-features">
+                        <h3>ميزات خدمة الشحن الدولي</h3>
+                        <ul>
+                            <li>شبكة شحن دولية تغطي أكثر من 100 وجهة حول العالم</li>
+                            <li>الالتزام بمعايير النقل الآمن والمطابقة الجمركية الدولية</li>
+                            <li>حلول مرنة تشمل النقل من الباب إلى الباب أو من الميناء إلى الميناء</li>
+                            <li>تتبّع مباشر للحاويات والشحنات عبر أنظمة رقمية متقدمة</li>
+                            <li>تنسيق كامل مع شركات الطيران والملاحة والنقل البري لضمان تسليم دقيق في المواعيد</li>
+                            <li>مرونة في تقديم خدمات إضافية مثل التأمين، التخليص، والتخزين عند الحاجة</li>
+                            <li>دعم متخصص للشحنات الحساسة أو الخاصة مثل المواد الطبية والأجهزة الإلكترونية</li>
+                            <li>إدارة كاملة لعملية الشحن من بداية الاستلام حتى التسليم النهائي</li>
+                        </ul>
+                    </div>
+
+                    <div class="shipping-options">
+                        <h3>أنواع خدمات الشحن الدولي</h3>
+
+                        <div class="shipping-option">
+                            <i class="fas fa-plane-departure"></i>
+                            <h4>الشحن الجوي</h4>
+                            <p>الحل الأمثل للشحنات المستعجلة أو الحساسة للوقت، مع خيارات متعددة حسب الوزن ونوع البضاعة. نوفّر خدمات شحن جوي إلى جميع المطارات الرئيسية في العالم، مع إمكانية الشحن من الباب إلى الباب أو من المطار إلى المطار.</p>
+                        </div>
+
+                        <div class="shipping-option">
+                            <i class="fas fa-ship"></i>
+                            <h4>الشحن البحري</h4>
+                            <p>بدائل اقتصادية للشحنات ذات الحجم الكبير أو الوزن الثقيل، سواء بالحاويات الكاملة (FCL) أو الجزئية (LCL). نوفّر خدمات شحن بحري إلى جميع الموانئ الرئيسية في العالم، مع إمكانية اختيار بين خدمات منتظمة أو خاصة حسب احتياجات الشحنة.</p>
+                        </div>
+
+                        <div class="shipping-option">
+                            <i class="fas fa-truck"></i>
+                            <h4>الشحن البري الدولي</h4>
+                            <p>ربط بري مباشر بين دول الخليج والدول المجاورة للمملكة عبر شبكة ناقلات منظمة. نوفّر حلول شحن بري دولي اقتصادية وآمنة للشحنات التي لا تتطلب سرعة الشحن الجوي أو حجم الشحن البحري.</p>
+                        </div>
+
+                        <div class="shipping-option">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h4>الشحن متعدد الوسائط</h4>
+                            <p>دمج بين أكثر من وسيلة نقل (جوي-بحري-بري) لتقليل الزمن والتكلفة حسب طبيعة الشحنة. نوفّر حلول شحن متكاملة تجمع بين مزايا كل وسيلة نقل لتوفير أفضل توازن بين التكلفة والسرعة.</p>
+                        </div>
+
+                        <div class="shipping-option">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>الشحن المؤمّن</h4>
+                            <p>تخصيص ترتيبات خاصة للبضائع الثمينة أو الحساسة، مع إشراف أمني وتتبّع لحظي. نوفّر حلول شحن مؤمن للبضائع عالية القيمة مثل المعادن الثمينة، العملات، والأجهزة الإلكترونية الحساسة.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-process">
+                        <h3>آلية عمل خدمات الشحن الدولي</h3>
+                        <ol>
+                            <li><strong>استلام تفاصيل الشحنة:</strong> نتلقى جميع تفاصيل الشحنة بما في ذلك نوع البضاعة، حجمها، وزنها، بلد المنشأ أو الوجهة، والمتطلبات الخاصة.</li>
+                            <li><strong>تحديد وسيلة النقل الأنسب:</strong> نختار وسيلة النقل الأمثل (جوي، بحري، بري، أو متعدد الوسائط) بناءً على طبيعة الشحنة، الوقت المتاح، والميزانية.</li>
+                            <li><strong>جدولة المسار الدولي:</strong> نقوم بتحديد المسار الأمثل للشحنة مع مراعاة عوامل مثل الوقت، التكلفة، والمتطلبات الجمركية.</li>
+                            <li><strong>إعداد الوثائق الجمركية:</strong> نتولى إعداد جميع الوثائق الجمركية وبيانات الشحن بالتنسيق مع الطرف المصدّر أو المستورد.</li>
+                            <li><strong>تنفيذ عملية النقل الدولي:</strong> نقوم بتنفيذ عملية النقل الدولي مع متابعة دقيقة لكل مرحلة من مراحل الرحلة.</li>
+                            <li><strong>إتمام إجراءات الدخول أو الخروج الجمركي:</strong> نتولى جميع إجراءات الدخول أو الخروج الجمركي عند المنافذ السعودية أو الدولية.</li>
+                            <li><strong>التسليم النهائي:</strong> نقوم بتسليم الشحنة حسب اختيار العميل (مستودع، منفذ، أو موقع نهائي) مع توثيق عملية الاستلام.</li>
+                        </ol>
+                    </div>
+
+                    <div class="comparison-section">
+                        <h3>مقارنة بين وسائل الشحن الدولية</h3>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>المعيار</th>
+                                    <th>الشحن الجوي</th>
+                                    <th>الشحن البحري</th>
+                                    <th>الشحن البري</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>السرعة</td>
+                                    <td>أسرع (1-5 أيام)</td>
+                                    <td>أبطأ (15-45 يوم)</td>
+                                    <td>متوسطة (3-14 يوم)</td>
+                                </tr>
+                                <tr>
+                                    <td>التكلفة</td>
+                                    <td>أعلى</td>
+                                    <td>أقل</td>
+                                    <td>متوسطة</td>
+                                </tr>
+                                <tr>
+                                    <td>السعة</td>
+                                    <td>محدودة (حتى عدة أطنان)</td>
+                                    <td>كبيرة (حاويات كاملة)</td>
+                                    <td>متوسطة (شاحنات كبيرة)</td>
+                                </tr>
+                                <tr>
+                                    <td>المناسب ل...</td>
+                                    <td>الشحنات المستعجلة أو الصغيرة</td>
+                                    <td>الشحنات الكبيرة أو الثقيلة</td>
+                                    <td>الشحنات إلى الدول المجاورة</td>
+                                </tr>
+                                <tr>
+                                    <td>المتابعة</td>
+                                    <td>تتبع لحظي دقيق</td>
+                                    <td>تتبع دوري</td>
+                                    <td>تتبع مستمر</td>
+                                </tr>
+                                <tr>
+                                    <td>المرونة</td>
+                                    <td>عالية (مواعيد متكررة)</td>
+                                    <td>محدودة (جداول ثابتة)</td>
+                                    <td>متوسطة (حسب الطلب)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="customs-support">
+                        <h3>الدعم الجمركي في خدمات الشحن الدولي</h3>
+                        <p>نوفّر دعمًا جمركيًا متكاملاً كجزء من خدمات الشحن الدولي، بما في ذلك:</p>
+                        <ul>
+                            <li>إعداد جميع المستندات الجمركية المطلوبة للاستيراد أو التصدير</li>
+                            <li>التنسيق مع الجهات الجمركية في بلد المنشأ والوجهة</li>
+                            <li>متابعة إجراءات الفحص والمعاينة الجمركية</li>
+                            <li>تسديد الرسوم الجمركية والضرائب نيابة عن العميل</li>
+                            <li>إدارة أي اعتراضات أو ملاحظات جمركية</li>
+                            <li>توفير استشارات حول الأنظمة والتعرفة الجمركية</li>
+                            <li>متابعة عملية الإفراج الجمركي حتى التسليم النهائي</li>
+                        </ul>
+                        <p>فريقنا المتخصص في الشؤون الجمركية يضمن تدفقًا سلسًا للشحنة عبر جميع الحدود الجمركية دون تأخيرات أو تعقيدات.</p>
+                    </div>
+
+                    <div class="special-cargo">
+                        <h3>شحن البضائع الخاصة والحساسة</h3>
+                        <p>لدينا خبرة واسعة في التعامل مع البضائع الخاصة والحساسة، بما في ذلك:</p>
+                        <div class="special-cargo-types">
+                            <div class="cargo-type">
+                                <i class="fas fa-medkit"></i>
+                                <h4>المواد الطبية والأدوية</h4>
+                                <p>نوفّر حلول شحن مخصصة للمواد الطبية والأدوية التي تتطلب ظروف تخزين ونقل خاصة، مع ضمان الحفاظ على سلسلة التبريد عند الضرورة.</p>
+                            </div>
+                            <div class="cargo-type">
+                                <i class="fas fa-microchip"></i>
+                                <h4>الأجهزة الإلكترونية الحساسة</h4>
+                                <p>نقدم خدمات شحن متخصصة للأجهزة الإلكترونية الحساسة التي تتطلب تعاملًا خاصًا وحماية من الصدمات والرطوبة والتغيرات الحرارية.</p>
+                            </div>
+                            <div class="cargo-type">
+                                <i class="fas fa-gem"></i>
+                                <h4>المعادن الثمينة والمجوهرات</h4>
+                                <p>نوفّر حلول شحن مؤمنة للمعادن الثمينة والمجوهرات مع إجراءات أمان مشددة وتأمين شامل ضد جميع المخاطر.</p>
+                            </div>
+                            <div class="cargo-type">
+                                <i class="fas fa-flask"></i>
+                                <h4>المواد الكيميائية والخطرة</h4>
+                                <p>لدينا خبرة في شحن المواد الكيميائية والخطرة وفقًا لجميع اللوائح الدولية والمعايير الأمنية، مع توثيق كامل لجميع الإجراءات.</p>
+                            </div>
+                            <div class="cargo-type">
+                                <i class="fas fa-pallet"></i>
+                                <h4>الشحنات كبيرة الحجم</h4>
+                                <p>نقدم حلول شحن مخصصة للشحنات كبيرة الحجم أو الثقيلة التي تتطلب معدات وتخطيط خاصين للنقل والتحميل.</p>
+                            </div>
+                            <div class="cargo-type">
+                                <i class="fas fa-thermometer-half"></i>
+                                <h4>البضائع التي تتطلب تبريدًا</h4>
+                                <p>نوفّر خدمات شحن متخصصة للبضائع التي تتطلب تبريدًا أو تجميدًا مثل المواد الغذائية والمنتجات الطبية الحساسة للحرارة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-sidebar">
+                    <div class="service-card">
+                        <h3>لماذا تختار نخبة المنافذ للشحن الدولي؟</h3>
+                        <ul>
+                            <li>شبكة شحن عالمية تغطي أكثر من 100 وجهة في جميع القارات</li>
+                            <li>شراكات استراتيجية مع أكبر شركات النقل والشحن الدولية</li>
+                            <li>خبرة واسعة في التعامل مع جميع أنواع البضائع بما في ذلك الحساسة والخاصة</li>
+                            <li>نظام تتبع متقدم يسمح بمتابعة الشحنة على مدار الساعة</li>
+                            <li>فريق متخصص في الشؤون الجمركية والضريبية الدولية</li>
+                            <li>حلول شحن مخصصة حسب احتياجات كل عميل على حدة</li>
+                            <li>التزام صارم بالمواعيد والتسليم في الوقت المحدد</li>
+                            <li>خدمات شحن من الباب إلى الباب أو من الميناء إلى الميناء حسب الاختيار</li>
+                            <li>دعم متكامل شامل للتخليص الجمركي والتخزين عند الحاجة</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>اتصل بنا الآن</h3>
+                        <p>لطلب خدمة الشحن الدولي أو الاستفسار عنها</p>
+                        <div class="contact-info">
+                            <!-- الزر الأول: تم تغليف النص بـ <span> -->
+                            <a href="tel:+966558868787" class="contact-btn">
+                                <i class="fas fa-phone"></i> <span>+966 55 886 8787</span>
+                            </a>
+                            <!-- الزر الثاني: تم تغليف النص بـ <span> -->
+                            <a href="https://wa.me/966556684992" class="contact-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span>+966 55 668 4992</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tracking-system">
+                        <h3>نظام تتبع الشحنات الدولية</h3>
+                        <p>نوفر لعملائنا إمكانية تتبع شحناتهم الدولية على مدار الساعة من خلال نظامنا المتقدم الذي يوفر:</p>
+                        <ul>
+                            <li>موقع الشحنة في الوقت الفعلي على الخريطة العالمية</li>
+                            <li>تاريخ ووقت آخر تحديث للموقع</li>
+                            <li>المسار المتوقع للوصول مع التقديرات الزمنية</li>
+                            <li>وقت التسليم المتوقع مع التنبيهات في حال أي تأخيرات</li>
+                            <li>معلومات عن حالة الشحنة ودرجة حرارتها (للشحنات المبردة)</li>
+                            <li>تاريخ كامل لعمليات الفحص والمعاينة الجمركية</li>
+                            <li>تنبيهات تلقائية عند عبور الشحنة للحدود الجمركية</li>
+                        </ul>
+                        <a href="../tracking.html" class="btn btn-primary">تتبع شحنتك الدولية</a>
+                    </div>
+
+                    <div class="shipping-calculator">
+                        <h3>آلة حاسبة الشحن الدولي</h3>
+                        <p>يمكنك استخدام آلتنا الحاسبة لتقدير تكلفة وتوقيت شحنتك الدولية بناءً على:</p>
+                        <ul>
+                            <li>بلد المنشأ والوجهة</li>
+                            <li>نوع البضاعة ووزنها وحجمها</li>
+                            <li>وسيلة الشحن المفضلة (جوي، بحري، بري)</li>
+                            <li>المتطلبات الخاصة (تبريد، تأمين، وغيرها)</li>
+                        </ul>
+                        <a href="../shipping-calculator.html" class="btn btn-primary">استخدم آلة الحاسبة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="service-faq">
+        <div class="container">
+            <h2>الأسئلة الشائعة عن الشحن الدولي</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي المستندات المطلوبة للشحن الدولي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>المستندات الأساسية المطلوبة للشحن الدولي تشمل:
+                        <ul>
+                            <li>الفاتورة التجارية (Commercial Invoice)</li>
+                            <li>قائمة التعبئة (Packing List)</li>
+                            <li>شهادة المنشأ (Certificate of Origin)</li>
+                            <li>وثيقة الشحن (Bill of Lading للبحري أو Air Waybill للجوي)</li>
+                            <li>ترخيص الاستيراد أو التصدير إذا كان مطلوبًا</li>
+                            <li>شهادات خاصة حسب نوع البضاعة (مثل شهادات الصحة للمواد الغذائية)</li>
+                            <li>وثائق التأمين إذا كان مطلوبًا</li>
+                        </ul>
+                        قد تختلف المتطلبات حسب نوع البضاعة وبلدي المنشأ والوجهة. فريقنا المتخصص يساعد في إعداد جميع المستندات المطلوبة.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم يستغرق وقت الشحن الدولي عادة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يعتمد وقت الشحن الدولي على عدة عوامل بما في ذلك:
+                        <ul>
+                            <li>وسيلة الشحن (جوي: 1-5 أيام، بحري: 15-45 يوم، بري: 3-14 يوم)</li>
+                            <li>المسافة بين بلد المنشأ والوجهة</li>
+                            <li>نوع البضاعة والمتطلبات الخاصة بها</li>
+                            <li>سرعة استجابة الجهات الجمركية في بلدي المنشأ والوجهة</li>
+                            <li>توافر المواعيد في وسائل النقل المختلفة</li>
+                        </ul>
+                        نوفّر تقديرات زمنية دقيقة عند طلب الخدمة، ونضمن متابعة مستمرة للشحنة حتى التسليم النهائي.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي تكلفة الشحن الدولي؟ وكيف يمكن تخفيضها؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تختلف تكلفة الشحن الدولي حسب عدة عوامل:
+                        <ul>
+                            <li>وسيلة الشحن (الجوي أغلى من البحري الذي أغلى من البري)</li>
+                            <li>وزن وحجم الشحنة</li>
+                            <li>المسافة بين بلد المنشأ والوجهة</li>
+                            <li>نوع البضاعة والمتطلبات الخاصة (تبريد، تأمين، وغيرها)</li>
+                            <li>الموسم ودرجة الطلب على خدمات الشحن</li>
+                        </ul>
+                        يمكن تخفيض تكلفة الشحن من خلال:
+                        <ul>
+                            <li>التخطيط المسبق والشحن في مواسم أقل ازدحامًا</li>
+                            <li>دمج الشحنات الصغيرة في حاوية واحدة (LCL)</li>
+                            <li>اختيار وسيلة شحن أكثر اقتصادية إذا كان الوقت يسمح بذلك</li>
+                            <li>التفاوض على أسعار أفضل مع شركات الشحن بناءً على حجم الشحنات</li>
+                        </ul>
+                        نوفّر استشارات مجانية لمساعدتك في اختيار الحلول الأكثر اقتصادية لشحنتك.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يمكن تتبع شحنتي الدولية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك تتبع شحنتك الدولية بعدة طرق:
+                        <ul>
+                            <li>من خلال نظامنا الإلكتروني المتقدم الذي يوفر تتبعًا لحظيًا على الخريطة العالمية</li>
+                            <li>باستخدام رقم تتبع الشحنة الذي نوفره بعد حجز الخدمة</li>
+                            <li>من خلال تحديثات دورية نرسلها عبر البريد الإلكتروني أو الرسائل القصيرة</li>
+                            <li>بالاتصال بفريق الدعم لدينا الذي يوفر معلومات محدثة عن حالة الشحنة</li>
+                            <li>من خلال تطبيق الجوال الخاص بنا الذي يوفر جميع ميزات التتبع</li>
+                        </ul>
+                        نوفّر أيضًا تنبيهات تلقائية عند عبور الشحنة للحدود الجمركية أو عند أي تأخيرات غير متوقعة.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي إجراءات الشحن الدولي للبضائع الحساسة أو الخاصة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>للبضائع الحساسة أو الخاصة، نتبع إجراءات خاصةضمن:
+                        <ul>
+                            <li>تقييم أولي لنوع البضاعة والمتطلبات الخاصة بها</li>
+                            <li>اختيار وسيلة نقل مناسبة مع مراعاة المتطلبات الخاصة (تبريد، أمان، وغيرها)</li>
+                            <li>توفير معدات وتغليف خاص حسب نوع البضاعة</li>
+                            <li>تنسيق مع جميع الجهات التنظيمية المعنية في بلدي المنشأ والوجهة</li>
+                            <li>متابعة مستمرة لحالة الشحنة خلال جميع مراحل النقل</li>
+                            <li>توفير تقارير دورية عن حالة الشحنة بما في ذلك درجة الحرارة والرطوبة إذا كان ذلك ضروريًا</li>
+                            <li>تأمين شامل ضد جميع المخاطر المحتملة</li>
+                            <li>إجراءات طوارئ متكاملة في حال حدوث أي مشكلات</li>
+                        </ul>
+                        لدينا خبرة واسعة في التعامل مع جميع أنواع البضائع الحساسة والخاصة بما في ذلك المواد الطبية، الأجهزة الإلكترونية، المعادن الثمينة، والمواد الكيميائية.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي خدمات الشحن من الباب إلى الباب؟ وكيف تختلف عن خدمات الشحن الأخرى؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>خدمات الشحن من الباب إلى الباب (Door-to-Door) تشمل:
+                        <ul>
+                            <li>استلام الشحنة من عنوان العميل في بلد المنشأ</li>
+                            <li>إدارة جميع إجراءات الشحن الدولي بما في ذلك التخليص الجمركي</li>
+                            <li>النقل إلى عنوان العميل النهائي في بلد الوجهة</li>
+                            <li>تسليم الشحنة وتوثيق عملية الاستلام</li>
+                        </ul>
+                        تختلف هذه الخدمة عن خدمات الشحن الأخرى مثل:
+                        <ul>
+                            <li>الشحن من الميناء إلى الميناء (Port-to-Port) حيث يتولى العميل نقل الشحنة من/إلى الموانئ</li>
+                            <li>الشحن من الباب إلى الميناء (Door-to-Port) أو من الميناء إلى الباب (Port-to-Door)</li>
+                        </ul>
+                        خدمات الشحن من الباب إلى الباب أكثر راحة للعميل حيث نتولى إدارة جميع مراحل عملية الشحن الدولية دون الحاجة إلى تنسيق مع عدة جهات مختلفة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات ذات صلة -->
+    <section class="related-services">
+        <div class="container">
+            <h2>خدمات ذات صلة</h2>
+            <div class="services-grid">
+                <!-- التخليص الجمركي -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>التخليص الجمركي</h3>
+                    <p>خدمات تخليص جمركي متكاملة تضمن سرعة إنجاز المعاملات ودقة الإجراءات مع التزام تام بأنظمة الجمارك السعودية والمعايير الدولية.</p>
+                    <a href="customs-clearance.html" class="btn btn-primary">المزيد</a>
+                </div>
+
+                <!-- النقل -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>النقل</h3>
+                    <p>حلول نقل متكاملة تغطي المدن الرئيسية والمنافذ الجمركية في المملكة، مع خيارات متعددة تناسب نوع البضاعة ومتطلبات الأمان.</p>
+                    <a href="transportation.html" class="btn btn-primary">المزيد</a>
+                </div>
+
+                <!-- الخدمات اللوجستية المتكاملة -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>الخدمات اللوجستية المتكاملة</h3>
+                    <p>منظومة متكاملة تغطي جميع مراحل الحركة التجارية من الاستيراد والتصدير إلى التخزين والإمداد تحت إدارة واحدة تضمن السرعة والدقة.</p>
+                    <a href="logistics.html" class="btn btn-primary">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                    <h4>نخبة المنافذ</h4>
+                    <p>نقدّم خدمات التخليص الجمركي باحترافية عالية، ونحرص على إنجاز معاملتك بسرعة ودقة عبر جميع منافذ المملكة.
+                        كما نوفر حلولاً لوجستية مكملة تشمل النقل والتخزين لتصل شحنتك بسهولة إلى وجهتها النهائية.
+                        نخبة المنافذ… نضع شحنتك على مسار الوصول .. لا الانتظار.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/966556684992" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="customs-clearance.html">التخليص الجمركي</a></li>
+                    <li><a href="transportation.html">النقل</a></li>
+                    <li><a href="international-shipping.html">الشحن الدولي</a></li>
+                    <li><a href="logistics.html">الخدمات اللوجستية المتكاملة</a></li>
+                    <li><a href="exhibitions.html">خدمات المعارض والفعاليات</a></li>
+                    <li><a href="packaging.html">التعبئة والتغليف</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط السريعة</h4>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../privacy-policy.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>معلومات الاتصال</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> الرياض | الدمام | جدة | منفذ البطحاء</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+966558868787" dir="ltr">+966 55 886 8787</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966556684992" dir="ltr">+966 55 668 4992</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:elite@portselite-sa.com">elite@portselite-sa.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 نخبة المنافذ. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- نافذة طلب الخدمة المنبثقة -->
+    <div id="serviceRequestModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h2>طلب خدمة</h2>
+            </div>
+            <div class="modal-body">
+                <form id="serviceRequestForm" class="service-form">
+                    <div class="form-group">
+                        <label for="serviceType">نوع الخدمة *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="customs">التخليص الجمركي</option>
+                            <option value="transport">النقل والتوزيع</option>
+                            <option value="shipping" selected>الشحن الدولي</option>
+                            <option value="logistics">الخدمات اللوجستية المتكاملة</option>
+                            <option value="exhibitions">خدمات المعارض والفعاليات</option>
+                            <option value="packaging">التعبئة والتغليف</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">رقم الهاتف *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="مثال: 0501234567 أو +966501234567" dir="ltr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" dir="ltr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">تفاصيل الطلب *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="يرجى وصف طلبك بالتفصيل (بلد المنشأ والوجهة، نوع البضاعة، حجمها، وزنها، موعد التسليم المطلوب، وغيرها من التفاصيل المهمة)" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> إرسال الطلب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="contactModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-button close-btn">&times;</span> 
+            <h2>طلب خدمة</h2>
+        </div>
+        <div class="modal-body">
+
+            <!-- ================================================== -->
+            <!--  رسالة النجاح (جديد) - ستكون مخفية في البداية   -->
+            <!-- ================================================== -->
+            <div class="success-message" style="display: none; text-align: center; padding: 40px 20px; transition: opacity 0.5s ease;">
+                <svg class="success-icon" viewBox="0 0 80 80" style="width: 80px; margin: 0 auto 20px; display: block;">
+                    <!-- الدائرة الخارجية والتحميل -->
+                    <circle class="success-circle-bg" cx="40" cy="40" r="38" fill="none" stroke="#e2e8f0" stroke-width="4" />
+                    <circle class="success-circle-progress" cx="40" cy="40" r="38" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="238.76" stroke-dashoffset="238.76" style="transition: stroke-dashoffset 1s ease-in-out; transform: rotate(-90deg); transform-origin: 50% 50%;" />
+                    <!-- علامة الصح -->
+                    <polyline class="success-checkmark" points="24,42 36,54 58,32" stroke="#10b981" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48" style="transition: stroke-dashoffset 0.4s ease-in-out 0.6s;" />
+                </svg>
+                <h3 style="color: #1e293b; margin-bottom: 10px;">! تم الإرسال بنجاح</h3>
+                <p style="color: #475569;">شكرًا لتواصلك معنا. سيقوم فريقنا بمراجعة طلبك والرد عليك قريبًا.</p>
+            </div>
+            
+            <!-- ================================================== -->
+            <!--         نموذج الاتصال (الأصلي)                   -->
+            <!-- ================================================== -->
+            <form class="contact-form service-form" action="your-server-endpoint" method="POST" novalidate>
+              
+                <input type="hidden" name="service_type" value="التخليص الجمركي">
+<div class="form-group">
+                    <label for="service">نوع الخدمة *</label>
+                    
+                    <!-- الحاوية الجديدة للقائمة المخصصة -->
+                    <div class="custom-select-wrapper">
+                        <!-- هذا هو العنصر الذي سيظهر للمستخدم -->
+                        <div class="custom-select-trigger">
+                            <span>اختر نوع الخدمة</span>
+                            <div class="arrow"></div>
+                        </div>
+                        
+                        <!-- القائمة المنسدلة الحقيقية (ستكون مخفية) -->
+                        <select id="service" name="service" class="custom-select-original" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="customs">التخليص الجمركي</option>
+                            <option value="transport">النقل والتوزيع</option>
+                            <option value="shipping">الشحن الدولي</option>
+                            <option value="storage">الخدمات اللوجستية المتكاملة</option>
+                            <option value="supply">خدمات المعارض والفعاليات</option>
+                            <option value="supply">التعبئة والتغليف</option>
+                            <option value="other">أخرى</option>
+                        </select>
+
+                        <!-- الخيارات المخصصة مع الأيقونات -->
+                        <div class="custom-options">
+                            <div class="custom-option" data-value="customs"><i class="fas fa-file-invoice"></i> التخليص الجمركي</div>
+                            <div class="custom-option" data-value="transport"><i class="fas fa-truck-moving"></i> النقل والتوزيع</div>
+                            <div class="custom-option" data-value="shipping"><i class="fas fa-globe-americas"></i> الشحن الدولي</div>
+                            <div class="custom-option" data-value="storage"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</div>
+                            <div class="custom-option" data-value="supply"><i class="fas fa-calendar-alt"></i>خدمات المعارض والفعاليات</div>
+                            <div class="custom-option" data-value="supply"><i class="fas fa-box-open"></i>التعبئة والتغليف</div>
+                            <div class="custom-option" data-value="other"><i class="fa-solid fa-ellipsis-h"></i> أخرى</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">الاسم الكامل *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <input type="tel" id="phone" name="phone" dir="ltr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني *</label>
+                    <input type="email" id="email" name="email" dir="ltr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">رسالتك *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> إرسال الطلب
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- ملفات JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script>
+document.querySelectorAll('.btn-service-request').forEach(btn => {
+  btn.onclick = function(e) {
+    e.preventDefault();
+    if (typeof openServiceRequestModal === 'function') openServiceRequestModal();
+    else alert('يرجى التأكد من تحميل ملف js/modal.js أو وجود نافذة الطلب!');
+  };
+});
+    </script>
+    <script src="../js/services.js" defer></script>
+    <script>
+        // تفعيل الأسئلة الشائعة
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+
+                question.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    // إغلاق جميع العناصر الأخرى
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('open');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                            otherItem.querySelector('.faq-question i').classList.remove('fa-chevron-up');
+                            otherItem.querySelector('.faq-question i').classList.add('fa-chevron-down');
+                        }
+                    });
+
+                    // فتح أو إغلاق العنصر الحالي
+                    if (isOpen) {
+                        item.classList.remove('open');
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        item.classList.add('open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

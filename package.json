@@ -1,0 +1,20 @@
+{
+  "name": "portselite-website",
+  "version": "1.0.0",
+  "description": "موقع نخبة المنافذ - منصة تخليص جمركي وخدمات لوجستية",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server --port=3000 --open=/index.html"
+  },
+  "keywords": [
+    "logistics",
+    "customs",
+    "saudi-arabia"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

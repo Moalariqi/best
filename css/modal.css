@@ -1,0 +1,219 @@
+/* أنماط للنافذة المنبثقة المحسنة */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    overflow: hidden;
+}
+
+.modal-container.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal-header {
+    padding: 20px 30px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.modal-header h2 {
+    color: #1e293b;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    color: #5458a2;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-form label {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 16px;
+}
+
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus,
+.modal-form select:focus {
+    border-color: #5458a2;
+    box-shadow: 0 0 0 3px rgba(84, 88, 162, 0.1);
+    outline: none;
+}
+
+.modal-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.modal-form button {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    background: #5458a2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-form button:hover {
+    background: #3d4172;
+    transform: translateY(-2px);
+}
+
+/* أنماط للصفحات الصغيرة */
+@media (max-width: 768px) {
+    .modal-container {
+        width: 95%;
+        max-width: none;
+    }
+
+    .modal-header {
+        padding: 15px 20px 10px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-form .form-group {
+        gap: 5px;
+    }
+}
+
+/* أنماط للرسائل والنوتيفيكيشنز */
+.modal-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateX(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10002;
+}
+
+.modal-message.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.modal-message.success {
+    background: #10b981;
+}
+
+.modal-message.error {
+    background: #ef4444;
+}
+
+.modal-message.info {
+    background: #3b82f6;
+}
+
+/* أنماط للـ dropdown في الجوال */
+.mobile-dropdown {
+    display: none;
+    position: relative;
+}
+
+.mobile-dropdown.active {
+    display: block;
+}
+
+.mobile-dropdown-menu {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.mobile-dropdown-menu li {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #1e293b;
+}
+
+.mobile-dropdown-menu a:hover {
+    background: #f8fafc;
+    color: #5458a2;
+}

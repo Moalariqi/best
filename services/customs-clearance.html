@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="description" content="خدمات تخليص جمركي متكاملة في المملكة العربية السعودية من نخبة المنافذ. نضمن سرعة إنجاز المعاملات ودقة الإجراءات مع التزام تام بأنظمة الجمارك السعودية والمعايير الدولية.">
+    <meta name="keywords" content="تخليص جمركي, تخليص جمركي السعودية, تخليص جمركي الرياض, تخليص جمركي الدمام, تخليص جمركي جدة, تخليص جمركي البطحاء, خدمات جمركية, تخليص شحنات, تخليص واردات, تخليص صادرات">
+    <title>التخليص الجمركي | نخبة المنافذ</title>
+    <link rel="icon" href="../images/logo-icon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+            /* أنماط خاصة بصفحة التخليص الجمركي */
+        .customs-process {
+            background: rgba(84, 88, 162, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start; /* محاذاة العناصر لبداية الحاوية */
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(84, 88, 162, 0.1);
+        }
+
+        .process-step .step-number {
+            background: #5458a2;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .process-step .step-content h4 {
+            color: #5458a2;
+            margin-bottom: 5px;
+        }
+
+        /* --- تصميم متوافق مع الهاتف --- */
+        /* تطبيق هذه الأنماط على الشاشات التي يقل عرضها عن 768 بكسل */
+        @media (max-width: 768px) {
+            .customs-process {
+                padding: 20px; /* تقليل الحشوة الداخلية للحاوية الرئيسية */
+                margin: 20px 0; /* تقليل الهوامش الخارجية */
+            }
+
+            .process-step {
+                flex-direction: column; /* تغيير اتجاه العناصر إلى عمودي */
+                align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+                padding: 12px;
+            }
+
+            .process-step .step-number {
+                margin-right: 0; /* إزالة الهامش الأيمن من رقم الخطوة */
+                margin-bottom: 15px; /* إضافة هامش أسفل الرقم ليفصله عن النص */
+            }
+
+            .process-step .step-content h4 {
+                font-size: 1.1rem; /* تعديل حجم الخط ليكون مناسبًا للشاشات الصغيرة */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="شعار نخبة المنافذ" width="180" height="70" loading="eager">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="قائمة التنقل">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="customs-clearance.html"><i class="fas fa-file-invoice"></i> التخليص الجمركي</a></li>
+                            <li><a href="transportation.html"><i class="fas fa-truck-moving"></i> النقل</a></li>
+                            <li><a href="international-shipping.html"><i class="fas fa-globe-americas"></i> الشحن الدولي</a></li>
+                            <li><a href="logistics.html"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</a></li>
+                            <li><a href="exhibitions.html"><i class="fas fa-calendar-alt"></i> خدمات المعارض والفعاليات</a></li>
+                            <li><a href="packaging.html"><i class="fas fa-box-open"></i> التعبئة والتغليف</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            
+        </div>
+    </header>
+
+    <!-- قسم الخدمة الرئيسي -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <div class="service-hero-text">
+                    <h1>التخليص الجمركي</h1>
+                    <p>نقدّم خدمات تخليص جمركي متكاملة تضمن سرعة إنجاز المعاملات ودقة الإجراءات، مع التزام تام بأنظمة الجمارك السعودية والمعايير الدولية.</p>
+                    <button class="btn btn-primary open-form">اطلب الخدمة الآن</button>
+                    
+                </div>
+                <div class="service-hero-image">
+                    <img src="../images/customs-clearance.webp" alt="خدمات التخليص الجمركي" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تفاصيل الخدمة -->
+    <section class="service-details">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>خدمات التخليص الجمركي المتكاملة</h2>
+                    <p>فريقنا المتخصص يتولى إدارة جميع مراحل التخليص — من تقديم البيان الجمركي وحتى استلام البضائع — لتصل شحنتك إلى وجهتها بسلاسة، وبدون تأخير أو تعقيدات إدارية.</p>
+
+                    <div class="text-center" style="margin: 36px 0;">
+                        <button class="btn btn-primary open-form">
+                            <i class="fas fa-paper-plane"></i> اطلب هذه الخدمة
+                        </button>
+                    </div>
+
+                    <div class="service-features">
+                        <h3>ميزات خدمة التخليص الجمركي</h3>
+                        <ul>
+                            <li>سرعة إنجاز المعاملات الجمركية دون تأخير</li>
+                            <li>دقة في إعداد المستندات والمتابعة مع الجهات الحكومية</li>
+                            <li>التزام تام بأنظمة الجمارك السعودية والمعايير الدولية</li>
+                            <li>متابعة مستمرة لحالة الشحنة حتى التسليم النهائي</li>
+                            <li>خدمات تخليص مؤقت للمعارض والفعاليات</li>
+                            <li>تسديد الرسوم الجمركية والضرائب نيابة عن العميل</li>
+                        </ul>
+                    </div>
+
+                    <div class="customs-process">
+                        <h3>آلية عمل خدمات التخليص الجمركي</h3>
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>استلام المستندات الجمركية</h4>
+                                <p>نستلم جميع المستندات اللازمة مثل الفواتير، بيانات الشحن، شهادات المنشأ، وقوائم التعبئةتنسيقها مع الجهات الحكومية عبر منصة فسح.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>متابعة الفحص والمعاينة</h4>
+                                <p>نقوم بمتابعة عملية الفحص والمعاينة للشحنة حتى استلامها بشكل كامل وضمان مطابقتها للمواصفات المطلوبة.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>تسديد الرسوم الجمركية</h4>
+                                <p>نتولى تسديد جميع الرسوم الجمركية والضرائب نيابة عن العميل مع توفير تقارير مالية مفصلة عن جميع التكاليف.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>إدارة الاعتراضات والمراجعات</h4>
+                                <p>نقدم الدعم الكامل في حال وجود أي ملاحظات أو اعتراضات جمركية، مع متابعة حلها بشكل سريع وفعال.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>تسليم الشحنة النهائية</h4>
+                                <p>نضمن تسليم الشحنة إلى وجهتها النهائية سواء كانت مستودع العميل أو أي موقع آخر حسب الاتفاق.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-types">
+                        <h3>أنواع خدمات التخليص الجمركي</h3>
+                        <div class="service-type">
+                            <h4>التخليص الجمركي للشحنات الواردة (استيراد)</h4>
+                            <p>نقدم خدمات تخليص جمركي للشحنات الواردة من جميع المنافذ البحرية والجوية والبرية في المملكة، مع ضمان سرعة الإفراج الجمركي وتجنب أي تأخيرات.</p>
+                        </div>
+                        <div class="service-type">
+                            <h4>التخليص الجمركي للشحنات الصادرة (تصدير)</h4>
+                            <p>نقدم خدمات تخليص جمركي للشحنات الصادرة إلى مختلف الأسواق الإقليمية والدولية، مع ضمان الامتثال لجميع المتطلبات الجمركية للبلد المستهدف.</p>
+                        </div>
+                        <div class="service-type">
+                            <h4>التخليص الجمركي المؤقت للمعارض والفعاليات</h4>
+                            <p>نقدم خدمات تخليص جمركي مؤقت للمعارض والفعاليات باستخدام نظام ATA Carnet، مما يتيح دخول البضائع مؤقتًا دون دفع رسوم جمركية كاملة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-sidebar">
+                    <div class="service-card">
+                        <h3>لماذا تختار نخبة المنافذ للتخليص الجمركي؟</h3>
+                        <ul style="direction: rtl; list-style-position: inside; padding: 0; margin-right: 15px;">
+                            <li style="text-align: right;">خبرة أكثر من 15 عاماً في مجال التخليص الجمركي</li>
+                            <li>فريق متخصص ومعتمد من الجمارك السعودية</li>
+                            <li>نظام تتبع إلكتروني متقدم لحالة الشحنات</li>
+                            <li>التزام تام بالمواعيد والمعايير الجمركية</li>
+                            <li>خدمات مخصصة حسب احتياجات كل عميل</li>
+                            <li>شبكة واسعة من الشركاء في جميع المنافذ السعودية</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>اتصل بنا الآن</h3>
+                        <p>لطلب خدمة التخليص الجمركي أو الاستفسار عنها</p>
+                        <div class="contact-info">
+                            <!-- الزر الأول: تم تغليف النص بـ <span> -->
+                            <a href="tel:+966558868787" class="contact-btn">
+                                <i class="fas fa-phone"></i> <span>+966 55 886 8787</span>
+                            </a>
+                            <!-- الزر الثاني: تم تغليف النص بـ <span> -->
+                            <a href="https://wa.me/966556684992" class="contact-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span>+966 55 668 4992</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="service-faq">
+        <div class="container">
+            <h2>الأسئلة الشائعة عن التخليص الجمركي</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي المستندات المطلوبة للتخليص الجمركي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>المستندات الأساسية المطلوبة للتخليص الجمركي تشمل: الفاتورة التجارية، قائمة التعبئة، شهادة المنشأ، وثيقة الشحن (B/L أو AWB)، وترخيص الاستيراد إذا كان مطلوبًا. قد تختلف المتطلبات حسب نوع البضاعة وبلد المنشأ.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم يستغرق وقت التخليص الجمركي عادة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يعتمد وقت التخليص الجمركي على عدة عوامل بما في ذلك نوع البضاعة، كمال المستندات، وسرعة استجابة الجهات الحكومية. في معظم الحالات، نتمكن من إنجاز عملية التخليص خلال 24 إلى 72 ساعة من استلام المستندات الكاملة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي رسوم التخليص الجمركي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تختلف رسوم التخليص الجمركي حسب نوع البضاعة وقيمتها وبلد المنشأ. تشمل الرسوم عادة: الرسوم الجمركية، ضريبة القيمة المضافة، رسوم الخدمة، وأي رسوم إضافية حسب نوع البضاعة. نوفر تقارير مالية مفصلة لجميع التكاليف.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يمكن تخليص الشحنات الحساسة أو الخاصة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا خبرة واسعة في تخليص الشحنات الحساسة والخاصة مثل المعدات الطبية، المواد الكيميائية، والأجهزة الإلكترونية. نوفر خدمات تخليص مخصصة لهذه الأنواع من الشحنات مع ضمان الامتثال لجميع المتطلبات التنظيمية.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هو نظام ATA Carnet؟ وكيف يمكن الاستفادة منه؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نظام ATA Carnet هو وثيقة جمركية دولية تسمح بدخول البضائع مؤقتًا إلى بلد ما دون دفع رسوم جمركية أو ضرائب، شريطة إعادة تصديرها خلال فترة محددة. هذا النظام مفيد بشكل خاص للمعارض والفعاليات المؤقتة. نوفر خدمات إدارة ATA Carnet من البداية حتى النهاية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات ذات صلة -->
+    <section class="related-services">
+        <div class="container">
+            <h2>خدمات ذات صلة</h2>
+            <div class="services-grid">
+                <!-- خدمة النقل -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>النقل</h3>
+                    <p>حلول نقل متكاملة تغطي المدن الرئيسية والمنافذ الجمركية في المملكة، مع خيارات متعددة تناسب نوع البضاعة ومتطلبات الأمان.</p>
+                    <a href="transportation.html" class="btn btn-primary">المزيد</a>
+                </div>
+
+                <!-- الشحن الدولي -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>الشحن الدولي</h3>
+                    <p>نوفّر حلولاً مرنة وفعالة للشحن الدولي عبر شبكات النقل الجوية والبحرية والبرية إلى أكثر من 100 وجهة حول العالم.</p>
+                    <a href="international-shipping.html" class="btn btn-primary">المزيد</a>
+                </div>
+
+                <!-- الخدمات اللوجستية المتكاملة -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>الخدمات اللوجستية المتكاملة</h3>
+                    <p>منظومة متكاملة تغطي جميع مراحل الحركة التجارية من الاستيراد والتصدير إلى التخزين والإمداد تحت إدارة واحدة تضمن السرعة والدقة.</p>
+                    <a href="logistics.html" class="btn btn-primary">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                    <h4>نخبة المنافذ</h4>
+                    <p>نقدّم خدمات التخليص الجمركي باحترافية عالية، ونحرص على إنجاز معاملتك بسرعة ودقة عبر جميع منافذ المملكة.
+                        كما نوفر حلولاً لوجستية مكملة تشمل النقل والتخزين لتصل شحنتك بسهولة إلى وجهتها النهائية.
+                        نخبة المنافذ… نضع شحنتك على مسار الوصول .. لا الانتظار.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/966556684992" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="customs-clearance.html">التخليص الجمركي</a></li>
+                    <li><a href="transportation.html">النقل</a></li>
+                    <li><a href="international-shipping.html">الشحن الدولي</a></li>
+                    <li><a href="logistics.html">الخدمات اللوجستية المتكاملة</a></li>
+                    <li><a href="exhibitions.html">خدمات المعارض والفعاليات</a></li>
+                    <li><a href="packaging.html">التعبئة والتغليف</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط السريعة</h4>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../privacy-policy.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>معلومات الاتصال</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> الرياض | الدمام | جدة | منفذ البطحاء</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+966558868787" dir="ltr">+966 55 886 8787</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966556684992" dir="ltr">+966 55 668 4992</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:elite@portselite-sa.com">elite@portselite-sa.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 نخبة المنافذ. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+  <!-- نافذة طلب الخدمة المنبثقة (النموذج المعدل) -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-button close-btn">&times;</span> 
+            <h2>طلب خدمة</h2>
+        </div>
+        <div class="modal-body">
+
+            <!-- ================================================== -->
+            <!--  رسالة النجاح (جديد) - ستكون مخفية في البداية   -->
+            <!-- ================================================== -->
+            <div class="success-message" style="display: none; text-align: center; padding: 40px 20px; transition: opacity 0.5s ease;">
+                <svg class="success-icon" viewBox="0 0 80 80" style="width: 80px; margin: 0 auto 20px; display: block;">
+                    <!-- الدائرة الخارجية والتحميل -->
+                    <circle class="success-circle-bg" cx="40" cy="40" r="38" fill="none" stroke="#e2e8f0" stroke-width="4" />
+                    <circle class="success-circle-progress" cx="40" cy="40" r="38" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="238.76" stroke-dashoffset="238.76" style="transition: stroke-dashoffset 1s ease-in-out; transform: rotate(-90deg); transform-origin: 50% 50%;" />
+                    <!-- علامة الصح -->
+                    <polyline class="success-checkmark" points="24,42 36,54 58,32" stroke="#10b981" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48" style="transition: stroke-dashoffset 0.4s ease-in-out 0.6s;" />
+                </svg>
+                <h3 style="color: #1e293b; margin-bottom: 10px;">! تم الإرسال بنجاح</h3>
+                <p style="color: #475569;">شكرًا لتواصلك معنا. سيقوم فريقنا بمراجعة طلبك والرد عليك قريبًا.</p>
+            </div>
+            
+            <!-- ================================================== -->
+            <!--         نموذج الاتصال (الأصلي)                   -->
+            <!-- ================================================== -->
+            <form class="contact-form service-form" action="your-server-endpoint" method="POST" novalidate>
+              
+                <input type="hidden" name="service_type" value="التخليص الجمركي">
+<div class="form-group">
+                    <label for="service">نوع الخدمة *</label>
+                    
+                    <!-- الحاوية الجديدة للقائمة المخصصة -->
+                    <div class="custom-select-wrapper">
+                        <!-- هذا هو العنصر الذي سيظهر للمستخدم -->
+                        <div class="custom-select-trigger">
+                            <span>اختر نوع الخدمة</span>
+                            <div class="arrow"></div>
+                        </div>
+                        
+                        <!-- القائمة المنسدلة الحقيقية (ستكون مخفية) -->
+                        <select id="service" name="service" class="custom-select-original" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="customs">التخليص الجمركي</option>
+                            <option value="transport">النقل والتوزيع</option>
+                            <option value="shipping">الشحن الدولي</option>
+                            <option value="storage">الخدمات اللوجستية المتكاملة</option>
+                            <option value="supply">خدمات المعارض والفعاليات</option>
+                            <option value="supply">التعبئة والتغليف</option>
+                            <option value="other">أخرى</option>
+                        </select>
+
+                        <!-- الخيارات المخصصة مع الأيقونات -->
+                        <div class="custom-options">
+                            <div class="custom-option" data-value="customs"><i class="fas fa-file-invoice"></i> التخليص الجمركي</div>
+                            <div class="custom-option" data-value="transport"><i class="fas fa-truck-moving"></i> النقل والتوزيع</div>
+                            <div class="custom-option" data-value="shipping"><i class="fas fa-globe-americas"></i> الشحن الدولي</div>
+                            <div class="custom-option" data-value="storage"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</div>
+                            <div class="custom-option" data-value="supply"><i class="fas fa-calendar-alt"></i>خدمات المعارض والفعاليات</div>
+                            <div class="custom-option" data-value="supply"><i class="fas fa-box-open"></i>التعبئة والتغليف</div>
+                            <div class="custom-option" data-value="other"><i class="fa-solid fa-ellipsis-h"></i> أخرى</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">الاسم الكامل *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <input type="tel" id="phone" name="phone" dir="ltr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني *</label>
+                    <input type="email" id="email" name="email" dir="ltr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">رسالتك *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> إرسال الطلب
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ملفات JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/services.js" defer></script>
+    <script>
+        // تفعيل الأسئلة الشائعة
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+
+                question.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    // إغلاق جميع العناصر الأخرى
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('open');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                            otherItem.querySelector('.faq-question i').classList.remove('fa-chevron-up');
+                            otherItem.querySelector('.faq-question i').classList.add('fa-chevron-down');
+                        }
+                    });
+
+                    // فتح أو إغلاق العنصر الحالي
+                    if (isOpen) {
+                        item.classList.remove('open');
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        item.classList.add('open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+document.querySelectorAll('.btn-service-request').forEach(btn => {
+  btn.onclick = function(e) {
+    e.preventDefault();
+    if (typeof openServiceRequestModal === 'function') openServiceRequestModal();
+    else alert('يرجى التأكد من تحميل ملف js/modal.js أو وجود نافذة الطلب!');
+  };
+});
+</script>
+</body>
+</html>
