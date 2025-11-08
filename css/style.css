@@ -452,13 +452,13 @@ body.dark-theme .hamburger:hover {
 
 @media (max-width: 1200px) {
     .logo img {
-        height: 60px;
+        height: 85px;
     }
 }
 
 @media (max-width: 1024px) {
     .logo img {
-        height: 55px;
+        height: 85px;
     }
 }
 
@@ -2174,7 +2174,7 @@ section img,
         }
 
         .logo img {
-            height: 45px;
+            height: 85px;
             max-width: 120px;
         }
 
@@ -2437,7 +2437,7 @@ section img,
     }
 
     .logo img {
-        height: 45px !important;
+        height: 85px !important;
     }
 
     .hamburger {
