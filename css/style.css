@@ -443,7 +443,7 @@ body.dark-theme .hamburger:hover {
 }
 
 .logo img {
-    height: 90px;
+    height: 75px;
     width: auto;
     object-fit: contain;
     transition: all var(--transition-base);
@@ -452,13 +452,13 @@ body.dark-theme .hamburger:hover {
 
 @media (max-width: 1200px) {
     .logo img {
-        height: 85px;
+        height: 75px;
     }
 }
 
 @media (max-width: 1024px) {
     .logo img {
-        height: 85px;
+        height: 75px;
     }
 }
 
@@ -1969,7 +1969,7 @@ section img,
     }
 
     .logo img {
-        height: 85px;
+        height: 75px;
         width: auto;
         max-width: 140px;
     }
@@ -2174,7 +2174,7 @@ section img,
         }
 
         .logo img {
-            height: 85px;
+            height: 75px;
             max-width: 120px;
         }
 
@@ -2437,7 +2437,7 @@ section img,
     }
 
     .logo img {
-        height: 85px !important;
+        height: 75px !important;
     }
 
     .hamburger {
