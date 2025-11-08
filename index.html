@@ -43,15 +43,19 @@
                         <a href="#">خدماتنا <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="services/customs-clearance.html"><i class="fas fa-file-invoice"></i> التخليص الجمركي</a></li>
+                            <li><a href="services/saber.html"><i class="fas fa-certificate"></i> إصدار شهادات سابر</a></li>
                             <li><a href="services/transportation.html"><i class="fas fa-truck-moving"></i> النقل</a></li>
                             <li><a href="services/international-shipping.html"><i class="fas fa-globe-americas"></i> الشحن الدولي</a></li>
                             <li><a href="services/logistics.html"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</a></li>
                             <li><a href="services/exhibitions.html"><i class="fas fa-calendar-alt"></i> خدمات المعارض والفعاليات</a></li>
                             <li><a href="services/packaging.html"><i class="fas fa-box-open"></i> التعبئة والتغليف</a></li>
+                          
+
                         </ul>
                     </li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية وشروط الاستخدام</a></li>
                 </ul>
             </nav>
 
@@ -85,6 +89,16 @@
                     <h3>التخليص الجمركي</h3>
                     <p>خدمات تخليص جمركي متكاملة تضمن سرعة إنجاز المعاملات ودقة الإجراءات مع التزام تام بأنظمة الجمارك السعودية والمعايير الدولية.</p>
                     <a href="services/customs-clearance.html" class="btn btn-primary">المزيد</a>
+                </div>
+
+                <!-- خدمة إصدار شهادات سابر -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>إصدار شهادات سابر</h3>
+                    <p>بسرعة. سهولة. مطابقة مضمونة. نُنجز لك شهادة سابر وشهادات المطابقة إلكترونيًا خلال وقت قياسي لتجاوز الفسح الجمركي بثقة.</p>
+                    <a href="services/saber.html" class="btn btn-primary">المزيد</a>
                 </div>
 
                 <!-- خدمة النقل -->
@@ -183,8 +197,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>شريكك الموثوق في النجاح</h3>
-                    <p>نخبة المنافذ هي أقوى منصة تخليص جمركي وخدمات لوجستية في المملكة العربية السعودية والشرق الأوسط. نتميز بفريق محترف وخبرة عميقة في مجال اللوجستيات والتخليص الجمركي.</p>
-                    <p>القرار معنا هو الفاصل بين التجربة والنتيجة. في نخبة المنافذ لا نجرب... نُنجز. نضمن أن شحنتك تصل كما خُطط لها - بسرعة، دقة، واحتراف.</p>
+                    <p>شريكك الموثوق في التخليص واللوجستيات   </p>
+                    <p>نخبة المنافذ منصة سعودية متخصصة في التخليص الجمركي والنقل والخدمات اللوجستية عبر جميع المنافذ.
+                        نُنجز شحنتك بدقّة وسرعة واحتراف، لتصل كما خُطط لها تماماً.</p>
                     <a href="about.html" class="btn btn-primary">المزيد عنا</a>
                 </div>
                 <div class="about-image">
@@ -261,21 +276,15 @@
                 <h4>الخدمات</h4>
                 <ul>
                     <li><a href="services/customs-clearance.html">التخليص الجمركي</a></li>
+                    <li><a href="services/saber.html">إصدار شهادات سابر</a></li>
                     <li><a href="services/transportation.html">النقل</a></li>
                     <li><a href="services/international-shipping.html">الشحن الدولي</a></li>
                     <li><a href="services/logistics.html">الخدمات اللوجستية المتكاملة</a></li>
-                    <li><a href="services/exhibitions.html">خدمات المعارض</a></li>
+                    <li><a href="services/exhibitions.html">خدمات المعارض والفعاليات</a></li>
                     <li><a href="services/packaging.html">التعبئة والتغليف</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>الروابط السريعة</h4>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
-                </ul>
-            </div>
+
             <div class="footer-section">
                 <h4>معلومات الاتصال</h4>
                 <ul>
@@ -335,22 +344,24 @@
                         <select id="service" name="service" class="custom-select-original" required>
                             <option value="">اختر نوع الخدمة</option>
                             <option value="customs">التخليص الجمركي</option>
+                            <option value="saber">إصدار شهادات سابر</option>
                             <option value="transport">النقل والتوزيع</option>
                             <option value="shipping">الشحن الدولي</option>
                             <option value="storage">الخدمات اللوجستية المتكاملة</option>
                             <option value="supply">خدمات المعارض والفعاليات</option>
-                            <option value="supply">التعبئة والتغليف</option>
+                            <option value="packaging">التعبئة والتغليف</option>
                             <option value="other">أخرى</option>
                         </select>
 
                         <!-- الخيارات المخصصة مع الأيقونات -->
                         <div class="custom-options">
                             <div class="custom-option" data-value="customs"><i class="fas fa-file-invoice"></i> التخليص الجمركي</div>
+                            <div class="custom-option" data-value="saber"><i class="fas fa-certificate"></i> إصدار شهادات سابر</div>
                             <div class="custom-option" data-value="transport"><i class="fas fa-truck-moving"></i> النقل والتوزيع</div>
                             <div class="custom-option" data-value="shipping"><i class="fas fa-globe-americas"></i> الشحن الدولي</div>
                             <div class="custom-option" data-value="storage"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</div>
                             <div class="custom-option" data-value="supply"><i class="fas fa-calendar-alt"></i>خدمات المعارض والفعاليات</div>
-                            <div class="custom-option" data-value="supply"><i class="fas fa-box-open"></i>التعبئة والتغليف</div>
+                            <div class="custom-option" data-value="packaging"><i class="fas fa-box-open"></i>التعبئة والتغليف</div>
                             <div class="custom-option" data-value="other"><i class="fa-solid fa-ellipsis-h"></i> أخرى</div>
                         </div>
                     </div>

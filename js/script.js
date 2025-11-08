@@ -80,12 +80,15 @@ function initDarkMode() {
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.nav-menu > li > a');
+    const dropdowns = document.querySelectorAll('.nav-menu .dropdown');
 
     if (hamburger) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
 
             // تأثير حركي عند فتح القائمة
             if (navMenu.classList.contains('active')) {
@@ -96,27 +99,84 @@ function initMobileMenu() {
                         link.style.transition = 'all 0.3s ease';
                         link.style.opacity = '1';
                         link.style.transform = 'translateX(0)';
-                    }, index * 100);
+                    }, index * 50);
+                });
+            } else {
+                // إغلاق جميع القوائم المنسدلة عند إغلاق القائمة الرئيسية
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('open');
                 });
             }
         });
     }
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            if (hamburger) {
-                hamburger.classList.remove('active');
+    // تفعيل القوائم المنسدلة على الهاتف
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('> a');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+        if (dropdownLink && dropdownMenu) {
+            dropdownLink.addEventListener('click', function(e) {
+                // على الشاشات الصغيرة، نفتح القائمة المنسدلة عند النقر
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // إغلاق جميع القوائم المنسدلة الأخرى
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
+                            otherDropdown.classList.remove('open');
+                        }
+                    });
+                    
+                    // فتح/إغلاق القائمة الحالية
+                    dropdown.classList.toggle('open');
+                }
+            });
+        }
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    document.addEventListener('click', function(e) {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                navMenu.classList.remove('active');
+                if (hamburger) {
+                    hamburger.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('open');
+                });
             }
+        }
+    });
+
+    // إغلاق القائمة عند النقر على رابط غير منسدل
+    navLinks.forEach(link => {
+        if (!link.parentElement.classList.contains('dropdown')) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    navMenu.classList.remove('active');
+                    if (hamburger) {
+                        hamburger.classList.remove('active');
+                    }
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    });
+
+    // تأثير حركي عند التمرير على الروابط (للمس فقط)
+    navLinks.forEach(link => {
+        link.addEventListener('touchstart', function() {
+            this.style.transform = 'translateX(-4px)';
         });
 
-        // تأثير حركي عند التمرير على الروابط
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-        });
-
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+        link.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = 'translateX(0)';
+            }, 150);
         });
     });
 }
@@ -1132,12 +1192,27 @@ function initHeaderActions() {
     }
 }
 
-// ========== أزرار عائمة: واتساب والاتصال ==========
+// ========== أزرار عائمة: واتساب والاتصال والإيميل ==========
 function initFloatingActions() {
+    // التحقق من وجود الأزرار العائمة مسبقاً
+    let actionContainer = document.querySelector('.floating-actions');
+    if (actionContainer) {
+        actionContainer.remove(); // إزالة الأزرار القديمة إن وجدت
+    }
+
     // create container for floating action buttons
-    const actionContainer = document.createElement('div');
+    actionContainer = document.createElement('div');
     actionContainer.className = 'floating-actions';
     actionContainer.style.zIndex = '9999';
+
+    // Email button (في الأعلى)
+    const emailBtn = document.createElement('f');
+    emailBtn.href = 'mailto:elite@portselite-sa.com';
+    emailBtn.className = 'floating-btn action-email';
+    emailBtn.title = 'أرسل بريد إلكتروني | Send Email';
+    emailBtn.innerHTML = '<i class="fas fa-envelope"></i>';
+    emailBtn.target = '_blank';
+    emailBtn.rel = 'noopener noreferrer';
 
     // WhatsApp button
     const whatsappBtn = document.createElement('a');
@@ -1155,7 +1230,8 @@ function initFloatingActions() {
     phoneBtn.title = 'اتصل بنا | Call Us';
     phoneBtn.innerHTML = '<i class="fas fa-phone"></i>';
 
-    // Append buttons to container
+    // Append buttons to container (الإيميل أولاً، ثم الواتساب، ثم الهاتف)
+    actionContainer.appendChild(emailBtn);
     actionContainer.appendChild(whatsappBtn);
     actionContainer.appendChild(phoneBtn);
 
@@ -1165,7 +1241,12 @@ function initFloatingActions() {
     // Show buttons with animation
     setTimeout(() => {
         actionContainer.classList.add('visible');
-    }, 500);
+        actionContainer.style.opacity = '1';
+        actionContainer.style.transform = 'translateX(0)';
+    }, 300);
+    
+    // التأكد من ظهور الأزرار حتى لو كانت مخفية
+    actionContainer.style.display = 'flex';
 }
 
 // ========== تأثير التموج عند النقر ==========

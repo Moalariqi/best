@@ -230,6 +230,8 @@ function initServiceRequestButtons() {
 
     if (currentPage.includes('customs-clearance')) {
         serviceTypeInput.value = 'customs';
+    } else if (currentPage.includes('saber')) {
+        serviceTypeInput.value = 'saber';
     } else if (currentPage.includes('transportation')) {
         serviceTypeInput.value = 'transport';
     } else if (currentPage.includes('international-shipping')) {

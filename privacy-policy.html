@@ -2,50 +2,116 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية وشروط الاستخدام | نخبة المنافذ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="description" content="خدمات نقل متكاملة في المملكة العربية السعودية من نخبة المنافذ. نوفر حلول نقل تغطي جميع المدن والمنافذ الجمركية مع خيارات متعددة تناسب جميع أنواع البضائع ومتطلبات الأمان.">
+    <meta name="keywords" content="نقل, خدمات نقل, نقل بري, نقل جوي, نقل بحري, نقل شحنات, نقل بضائع, نقل آمن, نقل معارض, نقل مؤمن, نقل داخل السعودية">
+    <title>خدمات النقل | نخبة المنافذ</title>
+    <link rel="icon" href="../images/logo-icon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
-        .policy-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: white;
+            /* أنماط خاصة بصفحة النقل */
+        .transport-map {
+            background: rgba(84, 88, 162, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .map-container {
+            position: relative;
+            margin: 30px 0;
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(84, 88, 162, 0.1);
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(84, 88, 162, 0.15);
         }
-        .policy-section {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
+
+        .map-container {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
-        .policy-section h2 {
+
+        .map-container img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .transport-types {
+            display: grid;
+            /* يقوم بعرض الأعمدة بشكل مرن، كل عمود بحد أدنى 300 بكسل */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .transport-type {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(84, 88, 162, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .transport-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(84, 88, 162, 0.2);
+        }
+
+        .transport-type i {
+            font-size: 40px;
             color: #5458a2;
             margin-bottom: 15px;
-            font-size: 24px;
         }
-        .policy-section h3 {
+
+        .transport-type h4 {
             color: #5458a2;
-            margin: 20px 0 10px;
+            margin-bottom: 10px;
             font-size: 20px;
         }
-        .policy-section p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-            color: #475569;
-        }
-        .policy-section ul {
-            margin: 10px 0 10px 20px;
-        }
-        .policy-section li {
-            margin-bottom: 8px;
-            line-height: 1.7;
-        }
-        .last-updated {
-            text-align: center;
-            margin: 40px 0;
-            color: #64748b;
-            font-style: italic;
+
+        /* --- تصميم متوافق مع الهاتف --- */
+        /* تطبيق هذه الأنماط على الشاشات التي يقل عرضها عن 768 بكسل */
+        @media (max-width: 768px) {
+            .transport-map {
+                padding: 20px; /* تقليل الحشوة الداخلية */
+                margin: 20px 0; /* تقليل الهوامش الخارجية */
+            }
+
+            .map-container {
+                margin: 20px 0; /* تقليل الهامش حول الخريطة */
+            }
+
+            .transport-types {
+                /* تعديل الشبكة لعرض عنصر واحد فقط في كل صف */
+                grid-template-columns: 1fr;
+                gap: 20px; /* تقليل الفجوة بين العناصر */
+                margin: 30px 0;
+            }
+
+            .transport-type {
+                padding: 20px; /* تقليل الحشوة الداخلية للعناصر */
+            }
+
+            .transport-type:hover {
+                /* إلغاء تأثير الرفع على الهاتف لأنه لا يحتوي على مؤشر */
+                transform: none;
+                box-shadow: 0 6px 18px rgba(84, 88, 162, 0.1);
+            }
+
+            .transport-type h4 {
+                font-size: 18px; /* تصغير حجم الخط قليلًا */
+            }
         }
     </style>
 </head>
@@ -66,8 +132,21 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/customs-clearance.html"><i class="fas fa-file-invoice"></i> التخليص الجمركي</a></li>
+                            <li><a href="services/saber.html"><i class="fas fa-certificate"></i> إصدار شهادات سابر</a></li>
+                            <li><a href="services/transportation.html"><i class="fas fa-truck-moving"></i> النقل</a></li>
+                            <li><a href="services/international-shipping.html"><i class="fas fa-globe-americas"></i> الشحن الدولي</a></li>
+                            <li><a href="services/logistics.html"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</a></li>
+                            <li><a href="services/exhibitions.html"><i class="fas fa-calendar-alt"></i> خدمات المعارض والفعاليات</a></li>
+                            <li><a href="services/packaging.html"><i class="fas fa-box-open"></i> التعبئة والتغليف</a></li>
+                        </ul>
+                    </li>
                     <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
+                       <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية وشروط الاستخدام</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,9 +155,9 @@
     <!-- قسم سياسة الخصوصية -->
     <section class="policy-section">
         <div class="container">
-            <div class="policy-content">
+            <div class="contactForm">
                 <h1>سياسة الخصوصية وشروط الاستخدام</h1>
-                <p>آخر تحديث: 15 يونيو 2024</p>
+                
 
                 <div class="policy-section">
                     <h2>سياسة الخصوصية</h2>
@@ -244,37 +323,61 @@
                     </ul>
                 </div>
 
-                <div class="last-updated">
-                    <p>آخر تحديث لهذه السياسة: 15 يونيو 2024</p>
-                </div>
 
-                <div class="contact-info">
-                    <h3>للاستفسارات أو طلبات الخصوصية:</h3>
-                    <p>يمكنكم التواصل معنا عبر:</p>
-                    <ul>
-                        <li>البريد الإلكتروني: <a href="mailto:privacy@portselite-sa.com">privacy@portselite-sa.com</a></li>
-                        <li>الهاتف: <a href="tel:+966558868787">+966 55 886 8787</a></li>
-                        <li>العنوان: الرياض، المملكة العربية السعودية</li>
-                    </ul>
+                <div class="contact-card">
+                    <h3>اتصل بنا الآن</h3>
+                    <p>لطلب خدمة النقل المتكاملة أو الاستفسار عنها</p>
+                    <div class="contact-info">
+                        <!-- زر الإيميل -->
+                        <a href="mailto:elite@portselite-sa.com" class="contact-btn email">
+                            <i class="fas fa-envelope"></i> <span>البريد الإلكتروني</span>
+                        </a>
+                        <!-- زر الواتساب -->
+                        <a href="https://wa.me/966556684992" class="contact-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> <span>+966 55 668 4992</span>
+                        </a>
+                        <!-- زر الهاتف -->
+                        <a href="tel:+966558868787" class="contact-btn">
+                            <i class="fas fa-phone"></i> <span>+966 55 886 8787</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+             
 
     <!-- تذييل الصفحة -->
     <footer class="footer">
-        <div class="footer-section">
+        <div class="footer-content">
+            <div class="footer-section">
                     <h4>نخبة المنافذ</h4>
                     <p>نقدّم خدمات التخليص الجمركي باحترافية عالية، ونحرص على إنجاز معاملتك بسرعة ودقة عبر جميع منافذ المملكة.
                         كما نوفر حلولاً لوجستية مكملة تشمل النقل والتخزين لتصل شحنتك بسهولة إلى وجهتها النهائية.
                         نخبة المنافذ… نضع شحنتك على مسار الوصول .. لا الانتظار.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/966556684992" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-section">
-                <h4>الروابط السريعة</h4>
+                <h4>الخدمات</h4>
                 <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="services/customs-clearance.html">التخليص الجمركي</a></li>
+                    <li><a href="services/saber.html">إصدار شهادات سابر</a></li>
+                    <li><a href="services/transportation.html">النقل</a></li>
+                    <li><a href="services/international-shipping.html">الشحن الدولي</a></li>
+                    <li><a href="services/logistics.html">الخدمات اللوجستية المتكاملة</a></li>
+                    <li><a href="services/exhibitions.html">خدمات المعارض والفعاليات</a></li>
+                    <li><a href="services/packaging.html">التعبئة والتغليف</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>معلومات الاتصال</h4>
+                <ul>
+                    <li> <a href="tel:+966558868787" dir="ltr">+966 55 886 8787</a><i class="fas fa-phone"></i></li>
+                    <li> <a href="https://wa.me/966556684992" dir="ltr">+966 55 668 4992</a><i class="fab fa-whatsapp"></i></li>
+                    <li> <a href="mailto:elite@portselite-sa.com">elite@portselite-sa.com</a><i class="fas fa-envelope"></i></li>
+                    <li><i class="fas fa-clock"> ساعات العمل: نعمل طوال الاسبوع لخدمتكم 7/24</li></i>
                 </ul>
             </div>
         </div>

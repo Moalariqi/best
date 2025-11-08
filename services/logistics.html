@@ -37,6 +37,7 @@
                         <a href="#">خدماتنا <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="customs-clearance.html"><i class="fas fa-file-invoice"></i> التخليص الجمركي</a></li>
+                            <li><a href="saber.html"><i class="fas fa-certificate"></i> إصدار شهادات سابر</a></li>
                             <li><a href="transportation.html"><i class="fas fa-truck-moving"></i> النقل</a></li>
                             <li><a href="international-shipping.html"><i class="fas fa-globe-americas"></i> الشحن الدولي</a></li>
                             <li><a href="logistics.html"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</a></li>
@@ -45,7 +46,8 @@
                         </ul>
                     </li>
                     <li><a href="../about.html">من نحن</a></li>
-                    <li><a href="../contact.html">تواصل معنا</a></li>
+                       <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية وشروط الاستخدام</a></li>
                 </ul>
             </nav>
 
@@ -316,29 +318,58 @@
                     </div>
                 </div>
 
-                <div class="service-sidebar">
-                    <div class="sidebar-section">
-                        <h3>خدمات ذات صلة</h3>
-                        <ul class="related-services">
-                            <li><a href="customs-clearance.html"><i class="fas fa-arrow-left"></i> التخليص الجمركي</a></li>
-                            <li><a href="transportation.html"><i class="fas fa-arrow-left"></i> خدمات النقل</a></li>
-                            <li><a href="international-shipping.html"><i class="fas fa-arrow-left"></i> الشحن الدولي</a></li>
-                            <li><a href="exhibitions.html"><i class="fas fa-arrow-left"></i> خدمات المعارض</a></li>
-                            <li><a href="packaging.html"><i class="fas fa-arrow-left"></i> التعبئة والتغليف</a></li>
-                        </ul>
+                <section class="related-services">
+                    <div class="container">
+                        <h2>خدمات ذات صلة</h2>
+                        <div class="services-grid">
+                            <!-- التخليص الجمركي -->
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <h3>التخليص الجمركي</h3>
+                                <p>خدمات تخليص جمركي متكاملة تضمن سرعة إنجاز المعاملات ودقة الإجراءات مع التزام تام بأنظمة الجمارك السعودية والمعايير الدولية.</p>
+                                <a href="customs-clearance.html" class="btn btn-primary">المزيد</a>
+                            </div>
+            
+                            <!-- النقل -->
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-truck-moving"></i>
+                                </div>
+                                <h3>النقل</h3>
+                                <p>حلول نقل متكاملة تغطي المدن الرئيسية والمنافذ الجمركية في المملكة، مع خيارات متعددة تناسب نوع البضاعة ومتطلبات الأمان.</p>
+                                <a href="transportation.html" class="btn btn-primary">المزيد</a>
+                            </div>
+            
+                            <!-- الخدمات اللوجستية المتكاملة -->
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h3>الخدمات اللوجستية المتكاملة</h3>
+                                <p>منظومة متكاملة تغطي جميع مراحل الحركة التجارية من الاستيراد والتصدير إلى التخزين والإمداد تحت إدارة واحدة تضمن السرعة والدقة.</p>
+                                <a href="logistics.html" class="btn btn-primary">المزيد</a>
+                            </div>
+                        </div>
                     </div>
+                </section>
 
                     <div class="contact-card">
                         <h3>اتصل بنا الآن</h3>
-                        <p>لطلب خدمة اللوجستية المتكاملةأو الاستفسار عنها</p>
+                        <p>لطلب خدمة اللوجستية المتكاملة أو الاستفسار عنها</p>
                         <div class="contact-info">
-                            <!-- الزر الأول: تم تغليف النص بـ <span> -->
-                            <a href="tel:+966558868787" class="contact-btn">
-                                <i class="fas fa-phone"></i> <span>+966 55 886 8787</span>
+                            <!-- زر الإيميل -->
+                            <a href="mailto:elite@portselite-sa.com" class="contact-btn email">
+                                <i class="fas fa-envelope"></i> <span>البريد الإلكتروني</span>
                             </a>
-                            <!-- الزر الثاني: تم تغليف النص بـ <span> -->
+                            <!-- زر الواتساب -->
                             <a href="https://wa.me/966556684992" class="contact-btn whatsapp">
                                 <i class="fab fa-whatsapp"></i> <span>+966 55 668 4992</span>
+                            </a>
+                            <!-- زر الهاتف -->
+                            <a href="tel:+966558868787" class="contact-btn">
+                                <i class="fas fa-phone"></i> <span>+966 55 886 8787</span>
                             </a>
                         </div>
                     </div>
@@ -349,108 +380,7 @@
         </div>
     </section>
 
-    <!-- قسم الأسئلة الشائعة -->
-    <section class="service-faq">
-        <div class="container">
-            <h2>أسئلة شائعة حول الخدمات اللوجستية المتكاملة</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>ما هي الخدمات اللوجستية المتكاملة التي تقدمونها؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نقدم حلولاً لوجستية متكاملة تغطي جميع مراحل سلسلة الإمداد، بما في ذلك: التخليص الجمركي، النقل البري والجوي والبحري، التخزين المتقدم (جاف، مبرد، آمن)، إدارة المخزون، التعبئة والتغليف، وإدارة سلاسل الإمداد. هدفنا هو توفير حلول مخصصة تلبي احتياجات كل عميل بشكل خاص.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>كيف يمكن لخدماتكم اللوجستية أن تفيد شركتي؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>يمكن لخدماتنا اللوجستية المتكاملة أن تفيد شركتك بعدة طرق: تقليل تكلفة العمليات اللوجستية، تحسين كفاءة سلسلة الإمداد، تقصير أوقات التسليم، تحسين جودة الخدمة للعملاء النهائيين، وتوفير رؤية أفضل لسلسلة الإمداد من خلال تقارير وتحليلات في الوقت الحقيقي.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>ما هي التقنيات التي تستخدمونها في خدماتكم اللوجستية؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نستخدم أحدث التقنيات في خدماتنا اللوجستية، بما في ذلك: أنظمة تتبع GPS في الوقت الحقيقي، منصة إدارة رقمية متكاملة، أدوات تحليل بيانات متقدمة، أنظمة أتمتة للعمليات الروتينية، وأنظمة تكامل مع أنظمة عملائنا. هذه التقنيات تساعدنا على تقديم خدمة أكثر كفاءة وشفافية.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>كيف تضمنون سلامة وأمان البضائع أثناء النقل والتخزين؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نضمن سلامة وأمان البضائع من خلال عدة تدابير: استخدام وسائل نقل مؤمنة ومجهزة بأنظمة تتبع، مستودعات مجهزة بأنظمة مراقبة وأمان متقدمة، بروتوكولات أمنية صارمة لجميع العمليات، تأمين شامل للبضائع عالية القيمة، وفريق متخصص في إدارة المخاطر اللوجستية.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>ما هي الدول التي تغطيها شبكتكم اللوجستية؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>تغطي شبكتنا اللوجستية أكثر من 50 دولة حول العالم، مع تركيز خاص على منطقة الشرق الأوسط وشمال أفريقيا. لدينا شراكات قوية مع وكلاء لوجستيين معتمدين في الموانئ الرئيسية في آسيا وأوروبا وأمريكا، مما يتيح لنا تقديم خدمات شحن ونقل فعالة في جميع أنحاء العالم.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <h3>كيف يمكنكم مساعدتي في تحسين سلاسل إمداد شركتي؟</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>يمكننا مساعدتك في تحسين سلاسل إمداد شركتك من خلال عدة طرق: تحليل سلاسل الإمداد الحالية لتحديد نقاط الضعف والفرص، تصميم حلول لوجستية مخصصة تلبي احتياجات شركتك الخاصة، تطبيق تقنيات متقدمة لتحسين الكفاءة والشفافية، وتقديم استشارات مستمرة لتحسين الأداء بشكل مستمر.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم خدمات ذات صلة -->
-    <section class="related-services">
-        <div class="container">
-            <h2>خدمات ذات صلة</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3>التخليص الجمركي</h3>
-                    <p>خدمات تخليص جمركي متكاملة لضمان سرعة إنجاز المعاملات ودقة الإجراءات مع التزام تام بأنظمة الجمارك السعودية.</p>
-                    <a href="customs-clearance.html" class="btn btn-primary">المزيد</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>النقل</h3>
-                    <p>حلول نقل متكاملة تغطي المدن الرئيسية والمنافذ الجمركية في المملكة، مع خيارات متعددة تناسب نوع البضاعة.</p>
-                    <a href="transportation.html" class="btn btn-primary">المزيد</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>الشحن الدولي</h3>
-                    <p>خدمات شحن دولي متكاملة تربط العالم بالمملكة عبر شبكات النقل الجوية والبحرية والبرية.</p>
-                    <a href="international-shipping.html" class="btn btn-primary">المزيد</a>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- تذييل الصفحة -->
     <footer class="footer">
@@ -470,30 +400,23 @@
             <div class="footer-section">
                 <h4>الخدمات</h4>
                 <ul>
-                    <li><a href="customs-clearance.html">التخليص الجمركي</a></li>
-                    <li><a href="transportation.html">النقل</a></li>
-                    <li><a href="international-shipping.html">الشحن الدولي</a></li>
-                    <li><a href="logistics.html">الخدمات اللوجستية المتكاملة</a></li>
-                    <li><a href="exhibitions.html">خدمات المعارض والفعاليات</a></li>
-                    <li><a href="packaging.html">التعبئة والتغليف</a></li>
+                    <li><a href="services/customs-clearance.html">التخليص الجمركي</a></li>
+                    <li><a href="services/saber.html">إصدار شهادات سابر</a></li>
+                    <li><a href="services/transportation.html">النقل</a></li>
+                    <li><a href="services/international-shipping.html">الشحن الدولي</a></li>
+                    <li><a href="services/logistics.html">الخدمات اللوجستية المتكاملة</a></li>
+                    <li><a href="services/exhibitions.html">خدمات المعارض والفعاليات</a></li>
+                    <li><a href="services/packaging.html">التعبئة والتغليف</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>الروابط السريعة</h4>
-                <ul>
-                    <li><a href="../index.html">الرئيسية</a></li>
-                    <li><a href="../about.html">من نحن</a></li>
-                    <li><a href="../contact.html">تواصل معنا</a></li>
-                    <li><a href="../privacy-policy.html">سياسة الخصوصية</a></li>
-                </ul>
-            </div>
+
             <div class="footer-section">
                 <h4>معلومات الاتصال</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> الرياض، حي الملك فهد، شارع الأمير سلطان بن عبدالعزيز، مبنى رقم 4567</li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+966558868787" dir="ltr">+966 55 886 8787</a></li>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966556684992" dir="ltr">+966 55 668 4992</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:elite@portselite-sa.com">elite@portselite-sa.com</a></li>
+                    <li> <a href="tel:+966558868787" dir="ltr">+966 55 886 8787</a><i class="fas fa-phone"></i></li>
+                    <li> <a href="https://wa.me/966556684992" dir="ltr">+966 55 668 4992</a><i class="fab fa-whatsapp"></i></li>
+                    <li> <a href="mailto:elite@portselite-sa.com">elite@portselite-sa.com</a><i class="fas fa-envelope"></i></li>
+                    <li><i class="fas fa-clock"> ساعات العمل: نعمل طوال الاسبوع لخدمتكم 7/24</li></i>
                 </ul>
             </div>
         </div>
@@ -516,6 +439,7 @@
                         <select id="serviceType" name="serviceType" required>
                             <option value="">اختر نوع الخدمة</option>
                             <option value="customs">التخليص الجمركي</option>
+                            <option value="saber">إصدار شهادات سابر</option>
                             <option value="transport">النقل والتوزيع</option>
                             <option value="shipping">الشحن الدولي</option>
                             <option value="logistics" selected>الخدمات اللوجستية المتكاملة</option>
@@ -590,6 +514,7 @@
                         <select id="service" name="service" class="custom-select-original" required>
                             <option value="">اختر نوع الخدمة</option>
                             <option value="customs">التخليص الجمركي</option>
+                            <option value="saber">إصدار شهادات سابر</option>
                             <option value="transport">النقل والتوزيع</option>
                             <option value="shipping">الشحن الدولي</option>
                             <option value="storage">الخدمات اللوجستية المتكاملة</option>
@@ -601,6 +526,7 @@
                         <!-- الخيارات المخصصة مع الأيقونات -->
                         <div class="custom-options">
                             <div class="custom-option" data-value="customs"><i class="fas fa-file-invoice"></i> التخليص الجمركي</div>
+                            <div class="custom-option" data-value="saber"><i class="fas fa-certificate"></i> إصدار شهادات سابر</div>
                             <div class="custom-option" data-value="transport"><i class="fas fa-truck-moving"></i> النقل والتوزيع</div>
                             <div class="custom-option" data-value="shipping"><i class="fas fa-globe-americas"></i> الشحن الدولي</div>
                             <div class="custom-option" data-value="storage"><i class="fas fa-project-diagram"></i> الخدمات اللوجستية المتكاملة</div>

@@ -66,6 +66,8 @@ function initServiceRequestButtons() {
                 const pageTitle = document.title;
                 if (pageTitle.includes('التخليص الجمركي')) {
                     serviceTypeSelect.value = 'customs';
+                } else if (pageTitle.includes('سابر')) {
+                    serviceTypeSelect.value = 'saber';
                 } else if (pageTitle.includes('النقل')) {
                     serviceTypeSelect.value = 'transport';
                 } else if (pageTitle.includes('الشحن الدولي')) {
@@ -209,6 +211,8 @@ function openServiceRequestModal() {
             const currentPage = window.location.pathname.split('/').pop();
             if (currentPage.includes('customs-clearance')) {
                 serviceTypeInput.value = 'customs';
+            } else if (currentPage.includes('saber')) {
+                serviceTypeInput.value = 'saber';
             } else if (currentPage.includes('transportation')) {
                 serviceTypeInput.value = 'transport';
             } else if (currentPage.includes('international-shipping')) {
